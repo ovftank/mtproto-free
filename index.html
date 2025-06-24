@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MTPROTO PROXY FREE</title>
+
+        <meta name="title" content="MTPROTO PROXY FREE" />
+        <meta name="description" content="Proxy Telegram MTProto miễn phí. Kết nối nhanh, ổn định cho Telegram." />
+        <meta name="keywords" content="mtproto proxy, telegram proxy, proxy free, proxy vietnam, proxy asia, singapore proxy, hong kong proxy, japan proxy, ovfteam proxy" />
+        <meta name="author" content="Tạ Tuấn Anh" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://proxy.ovfteam.com/" />
+        <meta property="og:title" content="MTPROTO PROXY FREE" />
+        <meta property="og:description" content="Proxy Telegram MTProto miễn phí. Kết nối nhanh, ổn định cho Telegram." />
+        <meta property="og:image" content="https://ovfteam.com/og-image.png" />
+        <meta property="og:image:alt" content="MTPROTO PROXY FREE - ovfteam" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:site_name" content="ovfteam" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://proxy.ovfteam.com/" />
+        <meta property="twitter:title" content="MTPROTO PROXY FREE" />
+        <meta property="twitter:description" content="Proxy Telegram MTProto miễn phí. Kết nối nhanh, ổn định cho Telegram." />
+        <meta property="twitter:image" content="https://ovfteam.com/og-image.png" />
+        <meta property="twitter:image:alt" content="MTPROTO PROXY FREE - ovfteam" />
+
+        <link rel="canonical" href="https://proxy.ovfteam.com/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="theme-color" content="#000000" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "MTPROTO PROXY FREE",
+                "url": "https://proxy.ovfteam.com",
+                "description": "Proxy Telegram MTProto miễn phí. Kết nối nhanh, ổn định cho Telegram.",
+                "applicationCategory": "NetworkingApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "VND"
+                },
+                "provider": {
+                    "@type": "Organization",
+                    "name": "ovfteam",
+                    "url": "https://ovfteam.com",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Tạ Tuấn Anh"
+                    }
+                }
+            }
+        </script>
+
+        <link rel="icon" href="https://ovfteam.com/.netlify/images?url=_ovftank%2Flogo.BnU-ETGC.png&fm=webp&w=36&h=36" type="image/png" sizes="180x180" fetchpriority="high" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    </head>
+    <body class="bg-white min-h-screen overflow-x-hidden" style="font-family: 'JetBrains Mono', monospace">
+        <canvas id="matrixCanvas" class="fixed inset-0 opacity-5 pointer-events-none z-0"></canvas>
+
+        <div id="particles" class="fixed inset-0 pointer-events-none z-5"></div>
+
+        <div class="fixed inset-0 opacity-5 pointer-events-none z-0">
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px); background-size: 20px 20px"></div>
+        </div>
+
+        <div class="fixed inset-0 pointer-events-none z-5">
+            <div class="floating-shape absolute w-4 h-4 border border-black opacity-20" style="top: 10%; left: 10%; animation: float 6s ease-in-out infinite"></div>
+            <div class="floating-shape absolute w-6 h-6 border border-black opacity-15" style="top: 20%; right: 15%; animation: float 8s ease-in-out infinite reverse"></div>
+            <div class="floating-shape absolute w-3 h-3 bg-black opacity-10" style="top: 60%; left: 20%; animation: float 7s ease-in-out infinite"></div>
+            <div class="floating-shape absolute w-5 h-5 border border-black opacity-25" style="bottom: 20%; right: 10%; animation: float 9s ease-in-out infinite reverse"></div>
+            <div class="floating-shape absolute w-2 h-2 bg-black opacity-30" style="top: 40%; right: 30%; animation: float 5s ease-in-out infinite"></div>
+
+            <div class="absolute top-0 left-1/4 w-px h-full bg-black opacity-10 cyber-line" style="animation-delay: 0s"></div>
+            <div class="absolute top-0 left-1/2 w-px h-full bg-black opacity-15 cyber-line" style="animation-delay: 1s"></div>
+            <div class="absolute top-0 left-3/4 w-px h-full bg-black opacity-10 cyber-line" style="animation-delay: 2s"></div>
+            <div class="absolute top-1/4 left-0 w-full h-px bg-black opacity-10 cyber-line-horizontal" style="animation-delay: 0.5s"></div>
+            <div class="absolute top-3/4 left-0 w-full h-px bg-black opacity-15 cyber-line-horizontal" style="animation-delay: 1.5s"></div>
+
+            <div class="absolute top-10 left-10 w-20 h-20 circuit-pattern opacity-5"></div>
+            <div class="absolute top-32 right-20 w-16 h-16 circuit-pattern opacity-8"></div>
+            <div class="absolute bottom-20 left-1/3 w-24 h-24 circuit-pattern opacity-6"></div>
+            <div class="absolute bottom-40 right-1/4 w-18 h-18 circuit-pattern opacity-7"></div>
+
+            <div class="data-stream absolute top-0 left-1/6 w-0.5 h-full opacity-20"></div>
+            <div class="data-stream absolute top-0 right-1/6 w-0.5 h-full opacity-15" style="animation-delay: 2s"></div>
+            <div class="data-stream absolute top-0 left-5/6 w-0.5 h-full opacity-25" style="animation-delay: 4s"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                    <div class="inline-block relative">
+                        <div class="glitch-container relative">
+                            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%); animation: glitchScan 3s linear infinite"></div>
+                            <h1 class="glitch relative text-4xl sm:text-5xl lg:text-7xl font-black text-black tracking-tighter mb-2 sm:mb-4" data-text="MTPROTO PROXY FREE">MTPROTO PROXY FREE</h1>
+                        </div>
+                        <div class="absolute -bottom-2 left-0 right-0 h-1 bg-black transform skew-x-12 neon-glow"></div>
+
+                        <div class="absolute inset-0 overflow-hidden">
+                            <div class="scan-line absolute w-full h-0.5 bg-black opacity-50"></div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-8 lg:mt-10">
+                        <div class="flex items-center justify-center gap-3 sm:gap-4 lg:gap-6 mb-4 sm:mb-6">
+                            <a href="https://app.ovfteam.com" target="_blank" class="shimmer rotate-1 hover:rotate-6 group/link relative bg-black text-white w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center cursor-pointer transition-all duration-700 ease-out border border-black overflow-hidden">
+                                <div class="absolute inset-0 bg-white transform scale-x-0 origin-left transition-transform duration-700 ease-out group-hover/link:scale-x-100"></div>
+                                <div class="absolute inset-0 border border-black opacity-0 group-hover/link:opacity-100 transition-opacity duration-700 cyber-border-glow"></div>
+                                <i class="fas fa-qrcode text-sm sm:text-base lg:text-lg relative z-10 transition-all duration-700 ease-out group-hover/link:text-black"></i>
+                                <div class="absolute inset-0 opacity-0 group-hover/link:opacity-20 transition-opacity duration-700 scan-overlay"></div>
+                            </a>
+                            <a href="https://github.com/ovftank/mtproto-free" target="_blank" class="shimmer -rotate-1 hover:-rotate-6 group/link relative bg-white text-black w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center cursor-pointer transition-all duration-700 ease-out border border-black overflow-hidden">
+                                <div class="absolute inset-0 bg-black transform scale-x-0 origin-right transition-transform duration-700 ease-out group-hover/link:scale-x-100"></div>
+                                <div class="absolute inset-0 border border-black opacity-0 group-hover/link:opacity-100 transition-opacity duration-700 cyber-border-glow"></div>
+                                <i class="fab fa-github text-sm sm:text-base lg:text-lg relative z-10 transition-all duration-700 ease-out group-hover/link:text-white"></i>
+                                <div class="absolute inset-0 opacity-0 group-hover/link:opacity-20 transition-opacity duration-700 scan-overlay"></div>
+                            </a>
+                            <a href="https://facebook.com/ovftank" target="_blank" class="shimmer rotate-1 hover:rotate-6 group/link relative bg-black text-white w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center cursor-pointer transition-all duration-700 ease-out border border-black overflow-hidden">
+                                <div class="absolute inset-0 bg-white transform scale-x-0 origin-left transition-transform duration-700 ease-out group-hover/link:scale-x-100"></div>
+                                <div class="absolute inset-0 border border-black opacity-0 group-hover/link:opacity-100 transition-opacity duration-700 cyber-border-glow"></div>
+                                <i class="fab fa-facebook text-sm sm:text-base lg:text-lg relative z-10 transition-all duration-700 ease-out group-hover/link:text-black"></i>
+                                <div class="absolute inset-0 opacity-0 group-hover/link:opacity-20 transition-opacity duration-700 scan-overlay"></div>
+                            </a>
+                            <a href="https://t.me/ovftank" target="_blank" class="shimmer -rotate-1 hover:-rotate-6 group/link relative bg-white text-black w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center cursor-pointer transition-all duration-700 ease-out border border-black overflow-hidden">
+                                <div class="absolute inset-0 bg-black transform scale-x-0 origin-right transition-transform duration-700 ease-out group-hover/link:scale-x-100"></div>
+                                <div class="absolute inset-0 border border-black opacity-0 group-hover/link:opacity-100 transition-opacity duration-700 cyber-border-glow"></div>
+                                <i class="fab fa-telegram text-sm sm:text-base lg:text-lg relative z-10 transition-all duration-700 ease-out group-hover/link:text-white"></i>
+                                <div class="absolute inset-0 opacity-0 group-hover/link:opacity-20 transition-opacity duration-700 scan-overlay"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-black shadow-lg mb-6 sm:mb-8 lg:mb-12 transition-all duration-300 cyber-panel holographic cyber-noise relative" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1); background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 100%)">
+                    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black to-transparent" style="animation: scanHorizontal 3s linear infinite"></div>
+                    <div class="p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-black"></div>
+                        <div class="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-black"></div>
+                        <div class="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-black"></div>
+                        <div class="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-black"></div>
+
+                        <div class="flex items-center gap-3 sm:gap-4 mb-4">
+                            <div class="w-2 h-2 sm:w-3 sm:h-3 bg-black rounded-full animate-pulse pulse-glow"></div>
+                            <span class="text-lg sm:text-xl lg:text-2xl font-black text-black tracking-wider uppercase typing-text overflow-hidden border-r-2 border-black whitespace-nowrap">CHỌN QUỐC GIA</span>
+                            <div class="flex-1 h-px bg-black opacity-20 wave-line"></div>
+                        </div>
+                        <div id="countryTabs" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap gap-2 sm:gap-3 mb-4"></div>
+                        <div class="text-xs sm:text-sm text-black leading-relaxed"><span class="font-black uppercase tracking-wider" style="text-shadow: 0 0 5px rgba(0, 0, 0, 0.5)">LƯU Ý:</span> các proxy này k phải lúc nào cũng live 100% đâu :v bạn nên thêm nhiều proxy vào telegram cùng lúc, chọn cái ping thấp nhất để dùng.</div>
+                    </div>
+                </div>
+
+                <div id="loading" class="text-center py-12 sm:py-16 lg:py-20 hidden">
+                    <div class="inline-block relative">
+                        <div class="loading-container relative">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-4 border-black border-t-transparent rounded-full animate-spin cyber-spin"></div>
+                            <div class="absolute inset-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-gray-300 border-b-transparent rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 1.5s"></div>
+                            <div class="absolute inset-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border border-black rounded-full pulse-ring"></div>
+                        </div>
+
+                        <div class="mt-4 flex justify-center gap-1">
+                            <div class="w-1 h-8 bg-black loading-bar" style="animation-delay: 0s"></div>
+                            <div class="w-1 h-8 bg-black loading-bar" style="animation-delay: 0.1s"></div>
+                            <div class="w-1 h-8 bg-black loading-bar" style="animation-delay: 0.2s"></div>
+                            <div class="w-1 h-8 bg-black loading-bar" style="animation-delay: 0.3s"></div>
+                            <div class="w-1 h-8 bg-black loading-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                    </div>
+                    <p class="mt-6 sm:mt-8 text-black font-black text-lg sm:text-xl lg:text-2xl tracking-wider uppercase glitch-text">ĐANG TẢI PROXY...</p>
+                </div>
+
+                <div id="error" class="bg-white border border-black mb-6 sm:mb-8 hidden shadow-lg relative overflow-hidden">
+                    <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(0, 0, 0, 0.05) 0%, transparent 50%); animation: noiseShift 6s ease-in-out infinite"></div>
+                    <div class="p-4 sm:p-6 relative">
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <div class="w-3 h-3 sm:w-4 sm:h-4 bg-black rounded-full"></div>
+                            <p id="errorMsg" class="text-black font-black text-sm sm:text-base lg:text-lg tracking-wider uppercase"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="proxyList" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"></div>
+            </div>
+        </div>
+
+        <button id="scrollToTop" class="shimmer fixed bottom-6 right-6 w-12 h-12 sm:w-14 sm:h-14 bg-black text-white border border-black cursor-pointer transition-all duration-700 ease-out opacity-100 visible transform translate-y-0 z-50 shadow-lg overflow-hidden group">
+            <div class="absolute inset-0 bg-white transform scale-x-0 origin-bottom transition-transform duration-700 ease-out group-hover:scale-x-100"></div>
+            <div class="absolute inset-0 border border-black opacity-0 group-hover:opacity-100 transition-opacity duration-700 cyber-border-glow"></div>
+            <i class="fas fa-chevron-up text-lg sm:text-xl relative z-10 transition-all duration-700 ease-out group-hover:text-black transform group-hover:-translate-y-2 group-hover:rotate-12"></i>
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 scan-overlay"></div>
+        </button>
+
+        <script>
+            const proxyList = document.getElementById('proxyList');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const errorMsg = document.getElementById('errorMsg');
+            const countryTabs = document.getElementById('countryTabs');
+
+            let currentCountry = 'SG';
+            let countries = [];
+            let allProxies = [];
+
+            const showLoading = () => {
+                loading.classList.remove('hidden');
+                error.classList.add('hidden');
+                proxyList.innerHTML = '';
+            };
+
+            const hideLoading = () => {
+                loading.classList.add('hidden');
+            };
+
+            const showError = (msg) => {
+                error.classList.remove('hidden');
+                errorMsg.textContent = msg;
+                hideLoading();
+            };
+
+            const formatTime = (timestamp) => {
+                const date = new Date(timestamp * 1000);
+                return date.toLocaleString('vi-VN');
+            };
+
+            const renderCountryTabs = () => {
+                const countryCounts = {};
+                allProxies.forEach((proxy) => {
+                    countryCounts[proxy.country] = (countryCounts[proxy.country] || 0) + 1;
+                });
+
+                const countryOrder = ['SG', 'KR', 'ID', 'HK', 'JP', 'MY', 'TH', 'PH'];
+
+                countries = Object.keys(countryCounts)
+                    .filter((code) => countryCounts[code] > 0)
+                    .map((code) => ({
+                        code,
+                        count: countryCounts[code]
+                    }))
+                    .sort((a, b) => {
+                        const indexA = countryOrder.indexOf(a.code);
+                        const indexB = countryOrder.indexOf(b.code);
+
+                        if (indexA !== -1 && indexB !== -1) {
+                            return indexA - indexB;
+                        }
+                        if (indexA !== -1) return -1;
+                        if (indexB !== -1) return 1;
+                        return a.code.localeCompare(b.code);
+                    });
+
+                countryTabs.innerHTML = '';
+
+                countries.forEach((country) => {
+                    const tab = document.createElement('button');
+                    const isActive = country.code === 'SG';
+                    tab.className = `country-tab group relative ${isActive ? 'active bg-black text-white' : 'bg-white text-black hover:text-white'} px-2 sm:px-3 md:px-4 py-2 sm:py-3 font-black text-xs sm:text-sm tracking-wider uppercase cursor-pointer transition-all duration-200 border border-black overflow-hidden text-center min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center`;
+                    tab.setAttribute('data-country', country.code);
+                    tab.innerHTML = `
+                        <span class="relative z-10">${country.code} (${country.count})</span>
+                        <div class="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
+                    `;
+                    countryTabs.appendChild(tab);
+                });
+
+                countryTabs.querySelectorAll('.country-tab').forEach((tab) => {
+                    tab.addEventListener('click', () => {
+                        const country = tab.getAttribute('data-country');
+                        selectCountry(country);
+                    });
+                });
+            };
+
+            const selectCountry = (country) => {
+                currentCountry = country;
+
+                countryTabs.querySelectorAll('.country-tab').forEach((tab) => {
+                    tab.classList.remove('active', 'bg-black', 'text-white');
+                    tab.classList.add('bg-white', 'text-black', 'hover:text-white');
+                });
+
+                const activeTab = countryTabs.querySelector(`[data-country="${country}"]`);
+                if (activeTab) {
+                    activeTab.classList.add('active', 'bg-black', 'text-white');
+                    activeTab.classList.remove('bg-white', 'text-black', 'hover:text-white');
+                }
+
+                filterAndRenderProxies();
+            };
+
+            const filterAndRenderProxies = () => {
+                const filtered = allProxies.filter((proxy) => proxy.country === currentCountry);
+                renderProxies(filtered);
+            };
+
+            const renderProxies = (proxies) => {
+                if (!proxies || proxies.length === 0) {
+                    proxyList.innerHTML = `
+                    <div class="col-span-full text-center py-12 sm:py-16 lg:py-20">
+                        <div class="inline-block bg-white border border-black shadow-lg p-6 sm:p-8">
+                            <p class="text-black font-black text-lg sm:text-xl lg:text-2xl tracking-wider uppercase">
+                                KHÔNG TÌM THẤY PROXY
+                            </p>
+                        </div>
+                    </div>
+                `;
+                    return;
+                }
+
+                proxyList.innerHTML = proxies
+                    .map(
+                        (proxy, index) => `
+                <div class="group bg-white border border-black shadow-lg transition-all duration-700 ease-out hover:shadow-xl cyber-panel holographic cyber-noise neon-border">
+                    <div class="p-4 sm:p-6 relative">
+
+                        <div class="absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-black opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-r-2 border-t-2 border-black opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-l-2 border-b-2 border-black opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-r-2 border-b-2 border-black opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div class="flex flex-col gap-3 mb-4">
+                            <div class="flex items-center justify-between">
+                                <div class="bg-black text-white px-3 py-1 font-black text-xs tracking-wider uppercase">
+                                    #${String(index + 1).padStart(2, '0')}
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="bg-black text-white px-2 py-1 font-black text-xs tracking-wider uppercase">
+                                        ${proxy.country}
+                                    </div>
+                                    <div class="w-2 h-2 bg-black rounded-full animate-pulse"></div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-gray-600 tracking-wider uppercase">
+                                CẬP NHẬT: ${formatTime(proxy.updateTime)}
+                            </div>
+                        </div>
+
+                        <a href="${proxy.link}"
+                           class="shimmer group/btn relative bg-black text-white w-full px-4 py-3 font-black text-sm tracking-wider uppercase cursor-pointer transition-all duration-700 ease-out border border-black text-center overflow-hidden block">
+                            <div class="absolute inset-0 bg-white transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-700 ease-out origin-left"></div>
+                            <div class="absolute inset-0 border border-black opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700 cyber-border-glow"></div>
+                            <span class="relative z-10 transition-all duration-700 ease-out group-hover/btn:text-black transform group-hover/btn:rotate-1">CONNECT</span>
+                            <div class="absolute inset-0 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-700 scan-overlay"></div>
+                        </a>
+                    </div>
+                </div>
+            `
+                    )
+                    .join('');
+            };
+
+            const fetchProxies = async () => {
+                showLoading();
+                try {
+                    const response = await fetch('/api/proxies');
+                    if (!response.ok) {
+                        throw new Error(`http error: ${response.status}`);
+                    }
+                    allProxies = await response.json();
+                    renderCountryTabs();
+                    filterAndRenderProxies();
+                } catch (err) {
+                    console.log('lỗi fetch:', err);
+                    showError(`lỗi load proxy: ${err.message}`);
+                } finally {
+                    hideLoading();
+                }
+            };
+
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+
+            const toggleScrollButton = () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                    scrollToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+                } else {
+                    scrollToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                    scrollToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                }
+            };
+
+            const scrollToTop = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'auto'
+                });
+            };
+
+            window.addEventListener('scroll', toggleScrollButton);
+            scrollToTopBtn.addEventListener('click', scrollToTop);
+
+            fetchProxies();
+
+            const canvas = document.getElementById('matrixCanvas');
+            const ctx = canvas.getContext('2d');
+
+            const resizeCanvas = () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            };
+
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const matrix = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}';
+            const matrixArray = matrix.split('');
+
+            const fontSize = 10;
+            const columns = canvas.width / fontSize;
+            const drops = [];
+
+            for (let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+
+            const drawMatrix = () => {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = '#000';
+                ctx.font = fontSize + 'px JetBrains Mono';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            };
+
+            setInterval(drawMatrix, 35);
+
+            const createParticles = () => {
+                const particlesContainer = document.getElementById('particles');
+
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.cssText = `
+                        position: absolute;
+                        width: 2px;
+                        height: 2px;
+                        background: black;
+                        opacity: ${Math.random() * 0.5 + 0.1};
+                        left: ${Math.random() * 100}%;
+                        top: ${Math.random() * 100}%;
+                        animation: particleFloat ${Math.random() * 10 + 5}s linear infinite;
+                        animation-delay: ${Math.random() * 5}s;
+                    `;
+                    particlesContainer.appendChild(particle);
+                }
+            };
+
+            createParticles();
+        </script>
+
+        <style>
+            .glitch {
+                animation: glitch 2s infinite;
+            }
+
+            .glitch::before,
+            .glitch::after {
+                content: attr(data-text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: black;
+            }
+
+            .glitch::before {
+                animation: glitch-1 0.5s infinite;
+                z-index: -1;
+            }
+
+            .glitch::after {
+                animation: glitch-2 0.5s infinite;
+                z-index: -2;
+            }
+
+            @keyframes glitch {
+                0%,
+                100% {
+                    transform: translate(0);
+                }
+                20% {
+                    transform: translate(-1px, 1px);
+                }
+                40% {
+                    transform: translate(-1px, -1px);
+                }
+                60% {
+                    transform: translate(1px, 1px);
+                }
+                80% {
+                    transform: translate(1px, -1px);
+                }
+            }
+
+            @keyframes glitch-1 {
+                0%,
+                100% {
+                    transform: translate(0);
+                }
+                10% {
+                    transform: translate(-1px, -1px);
+                }
+                20% {
+                    transform: translate(-2px, 0);
+                }
+                30% {
+                    transform: translate(2px, 1px);
+                }
+                40% {
+                    transform: translate(-1px, 1px);
+                }
+                50% {
+                    transform: translate(-2px, -1px);
+                }
+                60% {
+                    transform: translate(2px, 0);
+                }
+                70% {
+                    transform: translate(1px, -1px);
+                }
+                80% {
+                    transform: translate(-1px, 1px);
+                }
+                90% {
+                    transform: translate(1px, 0);
+                }
+            }
+
+            @keyframes glitch-2 {
+                0%,
+                100% {
+                    transform: translate(0);
+                }
+                10% {
+                    transform: translate(1px, 0);
+                }
+                20% {
+                    transform: translate(-1px, 1px);
+                }
+                30% {
+                    transform: translate(1px, -1px);
+                }
+                40% {
+                    transform: translate(-1px, -1px);
+                }
+                50% {
+                    transform: translate(1px, 1px);
+                }
+                60% {
+                    transform: translate(-1px, 0);
+                }
+                70% {
+                    transform: translate(-2px, 1px);
+                }
+                80% {
+                    transform: translate(2px, -1px);
+                }
+                90% {
+                    transform: translate(-1px, 0);
+                }
+            }
+
+            .neon-glow {
+                animation: neonPulse 2s ease-in-out infinite alternate;
+            }
+
+            @keyframes neonPulse {
+                from {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2);
+                }
+                to {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px) rotate(0deg);
+                }
+                33% {
+                    transform: translateY(-10px) rotate(120deg);
+                }
+                66% {
+                    transform: translateY(5px) rotate(240deg);
+                }
+            }
+
+            .scan-line {
+                animation: scan 3s linear infinite;
+            }
+
+            @keyframes scan {
+                0% {
+                    top: 0%;
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+                100% {
+                    top: 100%;
+                    opacity: 0;
+                }
+            }
+
+            .typing-text {
+                animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+            }
+
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+
+            @keyframes blink-caret {
+                from,
+                to {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: black;
+                }
+            }
+
+            .pulse-glow {
+                animation: pulseGlow 2s ease-in-out infinite;
+            }
+
+            @keyframes pulseGlow {
+                0%,
+                100% {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                }
+                50% {
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+                }
+            }
+
+            .wave-line {
+                animation: wave 2s ease-in-out infinite;
+            }
+
+            @keyframes wave {
+                0%,
+                100% {
+                    transform: scaleX(1);
+                }
+                50% {
+                    transform: scaleX(0.8);
+                }
+            }
+
+            @keyframes scanHorizontal {
+                0% {
+                    transform: translateX(-100%);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+
+            .cyber-spin {
+                animation: cyberSpin 1s linear infinite;
+            }
+
+            @keyframes cyberSpin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .pulse-ring {
+                animation: pulseRing 2s ease-out infinite;
+            }
+
+            @keyframes pulseRing {
+                0% {
+                    transform: scale(0.8);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+
+            .loading-bar {
+                animation: loadingBar 1.5s ease-in-out infinite;
+            }
+
+            @keyframes loadingBar {
+                0%,
+                100% {
+                    transform: scaleY(1);
+                }
+                50% {
+                    transform: scaleY(0.3);
+                }
+            }
+
+            @keyframes particleFloat {
+                0% {
+                    transform: translateY(100vh) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+
+            .glitch-text {
+                animation: glitchText 0.3s infinite;
+            }
+
+            @keyframes glitchText {
+                0%,
+                100% {
+                    transform: translate(0);
+                }
+                20% {
+                    transform: translate(-1px, 1px);
+                }
+                40% {
+                    transform: translate(-1px, -1px);
+                }
+                60% {
+                    transform: translate(1px, 1px);
+                }
+                80% {
+                    transform: translate(1px, -1px);
+                }
+            }
+
+            .shimmer {
+                animation: shimmer 3s ease-in-out infinite;
+            }
+
+            @keyframes shimmer {
+                0%,
+                100% {
+                    background-position: 0% 0%;
+                }
+                50% {
+                    background-position: 100% 100%;
+                }
+            }
+
+            .cyber-border-glow {
+                animation: borderPulse 2s ease-in-out infinite;
+            }
+
+            @keyframes borderPulse {
+                0%,
+                100% {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.2);
+                }
+                50% {
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            .scan-overlay {
+                background: linear-gradient(45deg, transparent 30%, rgba(0, 0, 0, 0.1) 50%, transparent 70%);
+                background-size: 20px 20px;
+                animation: scanMove 2s linear infinite;
+            }
+
+            @keyframes scanMove {
+                0% {
+                    background-position: 0 0;
+                }
+                100% {
+                    background-position: 20px 20px;
+                }
+            }
+
+            .cyber-line {
+                background: linear-gradient(to bottom, transparent, black, transparent);
+                animation: cyberPulse 4s ease-in-out infinite;
+            }
+
+            .cyber-line-horizontal {
+                background: linear-gradient(to right, transparent, black, transparent);
+                animation: cyberPulseHorizontal 4s ease-in-out infinite;
+            }
+
+            @keyframes cyberPulse {
+                0%,
+                100% {
+                    opacity: 0.1;
+                    transform: scaleY(1);
+                }
+                50% {
+                    opacity: 0.3;
+                    transform: scaleY(1.2);
+                }
+            }
+
+            @keyframes cyberPulseHorizontal {
+                0%,
+                100% {
+                    opacity: 0.1;
+                    transform: scaleX(1);
+                }
+                50% {
+                    opacity: 0.3;
+                    transform: scaleX(1.2);
+                }
+            }
+
+            .circuit-pattern {
+                background-image: linear-gradient(90deg, black 1px, transparent 1px), linear-gradient(black 1px, transparent 1px), linear-gradient(90deg, black 2px, transparent 2px), linear-gradient(black 2px, transparent 2px);
+                background-size: 10px 10px, 10px 10px, 20px 20px, 20px 20px;
+                background-position: 0 0, 0 0, 5px 5px, 5px 5px;
+                animation: circuitFlow 8s linear infinite;
+            }
+
+            @keyframes circuitFlow {
+                0% {
+                    background-position: 0 0, 0 0, 5px 5px, 5px 5px;
+                }
+                100% {
+                    background-position: 10px 10px, 10px 10px, 25px 25px, 25px 25px;
+                }
+            }
+
+            .data-stream {
+                background: linear-gradient(to bottom, transparent, black, transparent, black, transparent);
+                background-size: 100% 50px;
+                animation: dataFlow 3s linear infinite;
+            }
+
+            @keyframes dataFlow {
+                0% {
+                    background-position: 0 -50px;
+                }
+                100% {
+                    background-position: 0 100%;
+                }
+            }
+
+            @keyframes glitchScan {
+                0% {
+                    transform: translateX(-100%);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+
+            .holographic {
+                background: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0%, transparent 25%, rgba(0, 0, 0, 0.05) 50%, transparent 75%, rgba(0, 0, 0, 0.1) 100%);
+                background-size: 200% 200%;
+                animation: holographicShift 4s ease-in-out infinite;
+            }
+
+            @keyframes holographicShift {
+                0%,
+                100% {
+                    background-position: 0% 0%;
+                }
+                50% {
+                    background-position: 100% 100%;
+                }
+            }
+
+            @keyframes noiseShift {
+                0%,
+                100% {
+                    transform: translate(0, 0) scale(1);
+                }
+                33% {
+                    transform: translate(-10px, 10px) scale(1.1);
+                }
+                66% {
+                    transform: translate(10px, -10px) scale(0.9);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .floating-shape,
+                .cyber-line,
+                .cyber-line-horizontal,
+                .circuit-pattern,
+                .data-stream {
+                    display: none;
+                }
+
+                .glitch::before,
+                .glitch::after {
+                    display: none;
+                }
+            }
+        </style>
+    </body>
+</html>
