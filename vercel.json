@@ -45,7 +45,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'"
+          "value": "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' https://ovfteam.com data:; object-src 'none'; base-uri 'none'"
         },
         {
           "key": "Referrer-Policy",
